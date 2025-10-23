@@ -1,13 +1,9 @@
 /* reset default styles */
 
-
-
 header {
-
 }
 
 body {
-
 }
 ul {
   list-style: none;
@@ -16,12 +12,11 @@ ul {
 
 /* cards container */
 .charContainer {
-  
 }
 
 /* character card container */
 .charCard {
-  background-color:white;
+  background-color: white;
   border: 1px solid rgb(0, 0, 0);
   margin: 5px;
 }
@@ -37,13 +32,11 @@ ul {
   width: 100%;
 }
 
-
 .charHeadContainer h2 {
   margin-bottom: 0;
 }
 
 .charHeadContainer .favIcon {
-
 }
 
 /* character additional details - films */
@@ -60,19 +53,15 @@ ul {
   margin-left: 0.5rem;
 }
 
-.charDetailsList{
-
+.charDetailsList {
 }
 
-.charDetailsList li{ 
-  margin:5px;
+.charDetailsList li {
+  margin: 5px;
 }
 
-.primaryButton{
-
+.primaryButton {
 }
 
-.secondaryButton{
-
+.secondaryButton {
 }
-
