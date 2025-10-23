@@ -1,5 +1,15 @@
 /* reset default styles */
+@use 'variables';
+/* $card-size: 280px; */
 
+@media only screen and (max-width: calc(280px*5)) {
+  .charContainer {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) ; 
+
+    background-color: red;
+  }
+}
 
 
 header {
@@ -16,11 +26,37 @@ ul {
 
 /* cards container */
 .charContainer {
+  /*Using flexgrid*/
+  display:grid;
   
+  /* repeat's parameters: # of columns, size [top, right, bottom, left*/
+  /* grid-template-columns: repeat(5, 280px) ;  */
+  grid-template-columns: repeat(5, minmax(280px, 1fr)) ; 
+  
+  /* grid-template-columns: repeat(2, 1fr), repeat (2, 2fr); */
+
+
+  /* using flexbox*/ 
+ /* display: flex;
+ gap: 10px;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%; */
 }
 
 /* character card container */
 .charCard {
+  /* display:flex; */
+  /* flex-shrink: 20em;
+  flex-grow: 20em;
+  flex-basis: 18em; */
+  /* min-width: 20%; */
+  /* max-width: 20%; */
+  /* flex: 0 0 18%; */
+  /* flex-wrap: wrap; */
+
+  /* min-width: 280px; */
   background-color:white;
   border: 1px solid rgb(0, 0, 0);
   margin: 5px;

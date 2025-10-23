@@ -24,7 +24,9 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
 1. Currently, the cards are displayed vertically. Locate the styles.css file and modify the declarations for `.charContainer` so that the cards are organized in 5 columns of width 280 pixels using CSS grid.
 
+????
 2. Can we achieve this same effect using Flex display?
+
 
 3. Going back to using the grid layout. Instead of 280px, we want the width of the card to be responsive instead. **Hint:** lookup what fractional units are and how to use them.
 
