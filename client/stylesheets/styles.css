@@ -1,11 +1,11 @@
 /* reset default styles */
 /* @use 'variables'; */
 /* $card-size: 280px; */
-
+/* made the calc 100px so I could test whether the media query worked, and the red shows but the columns do not auto fit */
 /* @media only screen and (max-width: calc(280px*5)) {
   .charContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto, minmax(280px, 1fr));
 
     background-color: red;
   }
@@ -28,8 +28,8 @@ ul {
 
   /* repeat's parameters: # of columns, size [top, right, bottom, left*/
   /* grid-template-columns: repeat(5, 280px) ;  */
-  /* grid-template-columns: repeat(5, minmax(280px, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(5, minmax(280px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
 
   /* grid-template-columns: repeat(2, 1fr), repeat (2, 2fr); */
 
@@ -102,4 +102,13 @@ ul {
 }
 
 .secondaryButton {
+}
+
+@media only screen and (max-width: calc(280px*5.2)) {
+  .charContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    background-color: red;
+  }
 }

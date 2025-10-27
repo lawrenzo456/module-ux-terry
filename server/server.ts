@@ -5,7 +5,6 @@ import fileController from './controllers/fileController.ts';
 
 const app = express();
 
-
 const PORT = 3000;
 
 /**
@@ -22,22 +21,26 @@ app.use(express.static(path.resolve(import.meta.dirname, 'client')));
 /**
  * define route handlers
  */
-app.get('/api/characters',
+app.get(
+  '/api/characters',
   fileController.getCharacters,
-  (req, res) => res.status(200).json({ characters: [...res.locals.characters] }),
+  (req, res) => res.status(200).json({ characters: [...res.locals.characters] })
   // eslint-disable-next-line function-paren-newline
 );
 
-app.post('/api/info',
+app.post(
+  '/api/info',
   fileController.getHomeworldAndFilms,
-  (req, res) => res.status(200).json({ ...res.locals.info }),
+  (req, res) => res.status(200).json({ ...res.locals.info })
   // eslint-disable-next-line function-paren-newline
 );
 
 // respond with main app
-app.get('/', (req, res) => (
-  res.status(200).sendFile(path.resolve(import.meta.dirname, '../client/index.html'))
-));
+app.get('/', (req, res) =>
+  res
+    .status(200)
+    .sendFile(path.resolve(import.meta.dirname, '../client/index.html'))
+);
 
 /**
  * start server
